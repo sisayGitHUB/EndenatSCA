@@ -15,12 +15,12 @@ pacman::p_load(tidyverse, gapminder,
 
 # Home 
 
-## Row 1 {height=30%}
+## Row 1 {height=40%}
 
 ```{r}
 value_box(
-  title = "Short term plan",
-  value = "$5,000",
+  title = "Short term goal",
+  value = "5,000 members",
   showcase = bsicons::bs_icon("bank2"),
   theme = "primary"
 )
@@ -29,8 +29,8 @@ value_box(
 
 ```{r}
 value_box(
-  title = "Middle term plan",
-  value = "$100000 capital",
+  title = "Mediaum term goal",
+  value = "$100000 capial",
   showcase = bsicons::bs_icon("bank2"),
   theme = value_box_theme(bg = "#e6f2fd", fg = "#0B538E"),
   class = "border"
@@ -39,47 +39,62 @@ value_box(
 
 ```{r}
 value_box(
-  title = "Long term plan",
-  value = "Being national and international bank",
+  title = "Long term goal",
+  value = "Competitive Bank", 
   showcase = bsicons::bs_icon("bank2"),
   theme = value_box_theme(bg="#3f71ab")
 )
 ```
 
-## Row 2 {height=70%}
+## Row 2 {height=60%}
 እንደናት የሚሰጣቸው አገልግሎቶች
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BVTu67Gfcgk?si=BVO6iL5GvW3AQnAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # About ESCA
-## Who we are 
+## 
+Who we are 
 
 እንደእናት ዝቅተኛውን እና መካከለኛውን የህብረተሰብ ክፍል የኑሮና የአኗኗር ለውጥ ለማምጣት የተቋቋመ ማህበር ነው
-ማህበሩ ከአባላት ገንዘብ በማሰባሰብ መልሶ ብድር ይሰጣል
+ማህበሩ ከአባላት ገንዘብ በማሰባሰብ መልሶ ብድር ይሰጣል::
+
 የእንደእናት አላማዎ:-
+
 1. የአባላትን ቁጥር መጨመር
 2. የገንዘብ አቅም ማሳደግ
 3. ብድር መስጠት
 
+
 ## our history 
-Hello 
+our history 
 
-## Excutive comittees 
-ይትባረክ _ ሰብሳቢ
-ሽፈራው በፈቃዱ(ዶ/ር) (PhD) -- ም/ሰብሳቢ
-ታምሩ እሸቱ
+- History here  
+- History here
+- History here 
 
+## 
+Executive committees 
+
+1. ይትባረክ፡ ሰብሳቢ
+2. ሽፈራው በፈቃዱ(ዶ/ር) (PhD)፡ም/ሰብሳቢ
+3. ታምሩ እሸቱ፡
 
 ## contact us 
+
 xxx@gmail.com
 
 #  Membership 
 
-## Benefit of membership
+## 
+Benefit of membership
+
 ኅብረት ሥራ ማህበር ማለት፡-
+
 - ተመሳሳይ ዓላማና ፍላጎት ያላቸው ሰዎች በፈቃደኝነት ኢኮኖሚያዊና ማህበራዊ ችግሮቻቸውን  በጋራ ለመፍታት እውቀት ፣ ጉልበትና ገንዘባቸውን በማሰባሰብ የሚያቆሙትና ዲሞክራሲያዊ በሆነ መንገድ የሚያስተዳድሩት ተቋም ነው። (985/09 የፌዴራል ህብረት ሥራ ኤጀንሲ)
--በአባለት ከፍተኛ ተሳትፎ ተመጣጣኝ ካፒታል አውጥተው  በዲሞክራሲያዊ ሁኔታ የሚቆጣጠሩትና ትርፍና ኪሳራን በፍትሃዊ መንገድ የሚካፈሉበት በድርጅታቸው አማካይነት የጋራ ግባቸውን ለማሳካት በፈቃደኝነት  የተገናኙ የሰዎች ስብስብ ነው፡፡ (ILO የዓለም ሥራ ድርጅት)
--በጋራ ባለቤትነት በዴሞክራሲያዊ መንገድ በሚቆጣጠሩት ድርጅታቸው አማካኝነት የጋራ ማህበራዊና ምጣኔ ሃብታዊ ፍላጎታቸውን ለማርካት በፈቃደኝነት የተገናኙበትና ራስ ገዝ የሆነ የሰዎች ስብስብ ነው፡፡(ICA የዓለም ህብረት ሥራ ህብረት)
+
+- በአባለት ከፍተኛ ተሳትፎ ተመጣጣኝ ካፒታል አውጥተው  በዲሞክራሲያዊ ሁኔታ የሚቆጣጠሩትና ትርፍና ኪሳራን በፍትሃዊ መንገድ የሚካፈሉበት በድርጅታቸው አማካይነት የጋራ ግባቸውን ለማሳካት በፈቃደኝነት  የተገናኙ የሰዎች ስብስብ ነው፡፡ (ILO የዓለም ሥራ ድርጅት)
+
+- በጋራ ባለቤትነት በዴሞክራሲያዊ መንገድ በሚቆጣጠሩት ድርጅታቸው አማካኝነት የጋራ ማህበራዊና ምጣኔ ሃብታዊ ፍላጎታቸውን ለማርካት በፈቃደኝነት የተገናኙበትና ራስ ገዝ የሆነ የሰዎች ስብስብ ነው፡፡(ICA የዓለም ህብረት ሥራ ህብረት)
 
 ## Requirments 
 
