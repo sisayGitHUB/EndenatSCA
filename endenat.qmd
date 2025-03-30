@@ -23,7 +23,7 @@ include-in-header:
       <style>
         .slideshow-container {
           position: relative;
-          max-width: 700px;
+          max-width: 750px;
           margin: auto;
         }
         .slide {
