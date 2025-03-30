@@ -1,13 +1,58 @@
 ---
-title: "እንደእናት ቁጠባ እና ብድር ኃላፊነቱ የተወሰነ የህብረት ስራ ማህበርር "
+title: |
+  ![](logo.jpg){height=80px}  
+  እንደእናት ቁጠባ እና ብድር ኃላፊነቱ የተወሰነ የህብረት ስራ ማህበር
 format: dashboard
 theme: cerulean
+
+include-in-header:
+  - text: |
+      <style>
+        .navbar {
+          background-color: #14D941 !important; /* Green background */
+          color: black !important; /* Black text for contrast */
+        }
+        .navbar-brand {
+          font-size: 2rem; /* Adjust title font size */
+          font-weight: bold; /* Make title bold */
+        }
+        .navbar-brand img {
+          height: 80px; /* Adjust logo height */
+        }
+      </style>
+      <style>
+        .slideshow-container {
+          position: relative;
+          max-width: 800px;
+          margin: auto;
+        }
+        .slide {
+          display: none;
+          width: 100%;
+        }
+      </style>
+      <script>
+        let slideIndex = 0;
+        function showSlides() {
+          let slides = document.getElementsByClassName("slide");
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 10000); // Change image every 3 seconds
+        }
+        document.addEventListener("DOMContentLoaded", showSlides);
+      </script>
 ---
+
+
 
 ```{r}
 # load all packages 
 if (!require(pacman)) install.packages("pacman")
-pacman::p_load(tidyverse, gapminder,
+pacman::p_load(tidyverse, gapminder, sparkline,
               bslib, bsicons,
                shiny, rnaturalearth,
               plotly, countrycode, htmltools, reactable)
@@ -15,109 +60,112 @@ pacman::p_load(tidyverse, gapminder,
 
 # Home 
 
-## Row 1 {height=30%}
+## Row 1 {height=25%}
 
 ```{r}
 value_box(
-  title = "Short term goal",
-  value = "1,500 members",
-  showcase = bsicons::bs_icon("bank2"),
-  theme = "primary",
-  style = "font-size: 50px; padding: 5px; width: 400px;" # Adjust size
+  title = tags$span("Annual Growth Rate", style = "font-size: 22px; font-weight: bold;"),
+  value = tags$span(" 15% per year", style = "font-size: 30px;"),
+  showcase = bsicons::bs_icon("graph-up-arrow"), 
+  theme = value_box_theme(bg = "#d4edda", fg = "#155724") 
+  )
+```
+
+```{r}
+value_box(
+  title = tags$span("Short Term Goal", style = "font-size: 20px; font-weight: bold;"), # Title font size
+  value = tags$span("1,500 Members", style = "font-size: 25px;"), # Reduced value font size
+  showcase = bsicons::bs_icon("people-fill"), # Icon
+  theme = "primary", # Theme
+  style = "padding: 15px; width: 350px" # Adjust padding and width
 )
 
 ```
 
 ```{r}
 value_box(
-  title = "Mediaum term goal",
-  value = "$100000 capial",
-  showcase = bsicons::bs_icon("bank2"),
+  title = tags$span("Medium Term Goal ", style = "font-size: 20px; font-weight: bold;"),
+  value = tags$span("$100000 Capital", style = "font-size: 25px;"),
+  showcase = bsicons::bs_icon("wallet-fill"),
   theme = value_box_theme(bg = "#e6f2fd", fg = "#0B538E"),
-  class = "border"
+  class = "border",
+  style = "padding: 15px; width: 350px" # Adjust size
 )
 ```
 
 ```{r}
 value_box(
-  title = "Long term goal",
-  value = "Being Competitive Bank", 
+  title = tags$span("Long Term Goal", style = "font-size: 20px; font-weight: bold;"),
+  value = tags$span("Competetive Bank", style = "font-size: 25px;"), 
   showcase = bsicons::bs_icon("bank2"),
-  theme = value_box_theme(bg="#3f71ab")
+  theme = value_box_theme(bg="#3f71ab"),
+  style = "padding: 15px; width: 350px" # Adjust size
 )
 ```
 
-## Row 2 {height=60%}
-እንደናት የሚሰጣቸው አገልግሎቶች
+## Row 2 {height=75%}
+### {width=45%}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BVTu67Gfcgk?si=BVO6iL5GvW3AQnAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<img src="images/photo1.jpg" width="500" height="400" alt="Static Image">
 
-# About ESCA
-
-## Row 1
-
-<details>
-<summary> Who we are </summary> 
-
-
-</details>
-
-<details>
-  <summary>Our history</summary>
-  - [Submenu 2](#submenu2)  
   
-</details>
+### {width=55%}
 
-<details>
-  <summary>Executive committees </summary>
-  - [Submenu 3](#submenu3)  
-</details>
+<div class="slideshow-container">
+  <img src="images/photo2.jpg" class="slide" width="500" height="400">
+  <img src="images/photo3.jpg" class="slide" width="500" height="400">
+  <img src="images/photo4.jpg" class="slide" width="500" height="400">
+  <img src="images/photo5.jpg" class="slide" width="500" height="400">
+  <img src="images/photo6.jpg" class="slide" width="500" height="400">
+  <img src="images/photo7.jpg" class="slide" width="500" height="400">
+  <img src="images/photo8.jpg" class="slide" width="500" height="400">
+  <img src="images/photo9.jpg" class="slide" width="500" height="400">
+  <img src="images/photo10.jpg" class="slide" width="00" height="400">
+</div>
 
-<details>
-  <summary>contact us </summary>
-  - [Submenu 4](#submenu4)  
-</details>
+# About Us 
+## Row 1 {height=40%}
+### Submenu 4 {width=40%}
+እንደእናት ቁጠባ እና ብድር ኃላፊነቱ የተወሰነ የህብረት ስራ ማህበር  በ2013 ዓ.ም በዉስን አባላት ተመስርቶ በፍጥነት በማደግ ላይ የሚገኝ የህብረት ስራ ማህበር ነው፡፡ በአሁኑ ወቅት ሁለት ቢሮዎችን ከፍቶ ከ130 በላይ አባላትን አፍርቶ በመስራት ላይ ይገኛል፡፡ ቁ 1 ቢሯችን መሳለሚያ ሲሆን ቁ 2 ቢሯችን ደግሞ ሾላ ገበያ ይገኛል፡፡ 
+
+### Submenu 4 {#submenu4}
+እንደናት የሚሰጣቸው አገልግሎቶች ለማዎቅ የሚከተለውን ማስፈንጠሪያ በማጫን ያድምጡ፡
+
+<iframe width="400" height="250" src="https://www.youtube.com/embed/BVTu67Gfcgk?si=BVO6iL5GvW3AQnAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-## Row 2
+## Row 2 {height=40%}
+### {width=40%}
+የእንደናት ስራ አስፈጻሚ አባላት፡
 
-### Submenu 1 {#submenu1}
-Who we are 
+1. ** አቶ ይትባረክ ተሻለ፡ ሰብሳቢ **   
+2. **ዶ/ር ሽፈራው በፈቃዱ፡ ም/ሰብሳቢ  **  
+3. **አቶ ታምሩ እሸቱ: ኦዲተር**  
+4. **ኢ/ር ዘገ**  
+  
+### {width=60%}
+<img src="images/photo11.jpg" width="500" height="250" alt="Static Image">
+
+
+## Row 3 {height=20%}
+  Contact:
+📞 **Phone:** 0925526652  📠 **Fax:** ------- 📧 **Email:** [xxx@gmail.com](mailto:xxx@gmail.com)
+
+
+# Our Services
 
 እንደእናት ዝቅተኛውን እና መካከለኛውን የህብረተሰብ ክፍል የኑሮና የአኗኗር ለውጥ ለማምጣት የተቋቋመ ማህበር ነው
 ማህበሩ ከአባላት ገንዘብ በማሰባሰብ መልሶ ብድር ይሰጣል::
 የእንደእናት አላማዎ:-
 
 1. የአባላትን ቁጥር መጨመር
+
 2. የገንዘብ አቅም ማሳደግ
+
 3. ብድር መስጠት
 
-### Submenu 2 {#submenu2}
-
-Our history 
-
-- History here  
-- History here
-- History here 
-
-### Submenu 3 {#submenu3}
-
-Executive committees 
-
-1. ይትባረክ፡ ሰብሳቢ
-2. ሽፈራው በፈቃዱ(ዶ/ር) (PhD)፡ም/ሰብሳቢ
-3. ታምሩ እሸቱ፡
-
-### Submenu 4 {#submenu4}
-
-xxx@gmail.com
-
-
 #  Membership 
-
-## 
-Benefit of membership
-
+## Row {height=50%}
 ኅብረት ሥራ ማህበር ማለት፡-
 
 - ተመሳሳይ ዓላማና ፍላጎት ያላቸው ሰዎች በፈቃደኝነት ኢኮኖሚያዊና ማህበራዊ ችግሮቻቸውን  በጋራ ለመፍታት እውቀት ፣ ጉልበትና ገንዘባቸውን በማሰባሰብ የሚያቆሙትና ዲሞክራሲያዊ በሆነ መንገድ የሚያስተዳድሩት ተቋም ነው። (985/09 የፌዴራል ህብረት ሥራ ኤጀንሲ)
@@ -126,9 +174,18 @@ Benefit of membership
 
 - በጋራ ባለቤትነት በዴሞክራሲያዊ መንገድ በሚቆጣጠሩት ድርጅታቸው አማካኝነት የጋራ ማህበራዊና ምጣኔ ሃብታዊ ፍላጎታቸውን ለማርካት በፈቃደኝነት የተገናኙበትና ራስ ገዝ የሆነ የሰዎች ስብስብ ነው፡፡(ICA የዓለም ህብረት ሥራ ህብረት)
 
-## Requirments 
+## row 2 {height=50%}
+አባል ለመሆን ምን ያስፍእልጋል? 
 
-# News 
+1 ጉርድ ፎቶግራፍ
+
+2 የመመዝገቢያ 1000 ብር
+
+3 
+
+
+
+# Announcement 
 ... coming soon 
 
 

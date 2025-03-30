@@ -1,0 +1,6 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic&display=swap');
+
+.amharic-text {
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+}
