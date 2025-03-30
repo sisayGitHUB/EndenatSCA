@@ -1,6 +1,6 @@
 ---
 title: |
-  ![](logo.jpg){height=80px}  
+  ![](logo.jpg){height=60px}  
   እንደእናት ቁጠባ እና ብድር ኃላፊነቱ የተወሰነ የህብረት ስራ ማህበር
 format: dashboard
 theme: cerulean
@@ -23,7 +23,7 @@ include-in-header:
       <style>
         .slideshow-container {
           position: relative;
-          max-width: 800px;
+          max-width: 700px;
           margin: auto;
         }
         .slide {
@@ -64,8 +64,8 @@ pacman::p_load(tidyverse, gapminder, sparkline,
 
 ```{r}
 value_box(
-  title = tags$span("Annual Growth Rate", style = "font-size: 22px; font-weight: bold;"),
-  value = tags$span(" 15% per year", style = "font-size: 30px;"),
+  title = tags$span("Annual Growth Rate", style = "font-size: 18px; font-weight: bold;"),
+  value = tags$span(" 15% per year", style = "font-size: 22px;"),
   showcase = bsicons::bs_icon("graph-up-arrow"), 
   theme = value_box_theme(bg = "#d4edda", fg = "#155724") 
   )
@@ -73,8 +73,8 @@ value_box(
 
 ```{r}
 value_box(
-  title = tags$span("Short Term Goal", style = "font-size: 20px; font-weight: bold;"), # Title font size
-  value = tags$span("1,500 Members", style = "font-size: 25px;"), # Reduced value font size
+  title = tags$span("Short Term Goal", style = "font-size: 18px; font-weight: bold;"), # Title font size
+  value = tags$span("1,500 Members", style = "font-size: 22px;"), # Reduced value font size
   showcase = bsicons::bs_icon("people-fill"), # Icon
   theme = "primary", # Theme
   style = "padding: 15px; width: 350px" # Adjust padding and width
@@ -84,8 +84,8 @@ value_box(
 
 ```{r}
 value_box(
-  title = tags$span("Medium Term Goal ", style = "font-size: 20px; font-weight: bold;"),
-  value = tags$span("$100000 Capital", style = "font-size: 25px;"),
+  title = tags$span("Medium Term Goal ", style = "font-size: 18px; font-weight: bold;"),
+  value = tags$span("$100000 Capital", style = "font-size: 22px;"),
   showcase = bsicons::bs_icon("wallet-fill"),
   theme = value_box_theme(bg = "#e6f2fd", fg = "#0B538E"),
   class = "border",
@@ -95,8 +95,8 @@ value_box(
 
 ```{r}
 value_box(
-  title = tags$span("Long Term Goal", style = "font-size: 20px; font-weight: bold;"),
-  value = tags$span("Competetive Bank", style = "font-size: 25px;"), 
+  title = tags$span("Long Term Goal", style = "font-size: 18px; font-weight: bold;"),
+  value = tags$span("Competetive Bank", style = "font-size: 22px;"), 
   showcase = bsicons::bs_icon("bank2"),
   theme = value_box_theme(bg="#3f71ab"),
   style = "padding: 15px; width: 350px" # Adjust size
