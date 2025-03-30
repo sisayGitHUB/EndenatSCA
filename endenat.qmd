@@ -60,7 +60,7 @@ pacman::p_load(tidyverse, gapminder, sparkline,
 
 # Home 
 
-## Row 1 {height=25%}
+## Row 1 {height=26%}
 
 ```{r}
 value_box(
