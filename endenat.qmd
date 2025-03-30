@@ -17,7 +17,7 @@ include-in-header:
           font-weight: bold; /* Make title bold */
         }
         .navbar-brand img {
-          height: 80px; /* Adjust logo height */
+          height: 85px; /* Adjust logo height */
         }
       </style>
       <style>
