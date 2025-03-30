@@ -1,5 +1,5 @@
 ---
-title: "እንደእናትብድር እና ቁጠባ አክሲዮን ማህበር "
+title: "እንደእናት ቁጠባ እና ብድር ኃላፊነቱ የተወሰነ የህብረት ስራ ማህበርር "
 format: dashboard
 theme: cerulean
 ---
@@ -15,14 +15,15 @@ pacman::p_load(tidyverse, gapminder,
 
 # Home 
 
-## Row 1 {height=40%}
+## Row 1 {height=30%}
 
 ```{r}
 value_box(
   title = "Short term goal",
-  value = "5,000 members",
+  value = "1,500 members",
   showcase = bsicons::bs_icon("bank2"),
-  theme = "primary"
+  theme = "primary",
+  style = "font-size: 50px; padding: 5px; width: 400px;" # Adjust size
 )
 
 ```
@@ -40,7 +41,7 @@ value_box(
 ```{r}
 value_box(
   title = "Long term goal",
-  value = "Competitive Bank", 
+  value = "Being Competitive Bank", 
   showcase = bsicons::bs_icon("bank2"),
   theme = value_box_theme(bg="#3f71ab")
 )
